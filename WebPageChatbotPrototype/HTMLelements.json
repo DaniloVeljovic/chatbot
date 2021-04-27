@@ -1,0 +1,51 @@
+{
+  "intents": [
+    {
+      "tag": "paragraph",
+      "patterns": [
+        "i need a paragraph",
+        "put a paragraph",
+        "give me a paragraph",
+        "give me a paragraph with content"
+      ],
+      "responses": [
+        "<p id = ?> <CONTENT> </p>"
+      ]
+    },
+    {
+      "tag": "header1",
+      "patterns": [
+        "i need a header 1",
+        "put a header 1",
+        "give me a header 1",
+        "give me a header 1 with content"
+      ],
+      "responses": [
+        "<h1 id = ?> <CONTENT> </h1>"
+      ]
+    },
+    {
+      "tag": "header2",
+      "patterns": [
+        "i need a header 2",
+        "put a header 2",
+        "give me a header 2",
+        "give me a header 2 with content"
+      ],
+      "responses": [
+        "<h2 id = ?> <CONTENT> </h2>"
+      ]
+    },
+    {
+      "tag": "ulist",
+      "patterns": [
+        "i need a unoredered list",
+        "put a unordered list",
+        "give me a unordered list"
+      ],
+      "responses": [
+        "<ul id = ?> </ul>"
+      ]
+    }
+  ]
+}
