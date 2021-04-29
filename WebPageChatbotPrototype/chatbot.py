@@ -70,10 +70,29 @@ while True:
     res = res.replace("?", str(counter))
     if "content" in message:
         index = message.find('content')
+        index += 1
         res = res.replace("<CONTENT>", message[index:])
+    if "before" in message:
+        index = message.find('id')
+        index += 2
+        element = message[index:]
+        index = webpageString.find('id ='+ element)
+        index -= 12
+        webpageString = webpageString[:index] + res + webpageString[index:]
+    if "after" in message:
+        index = message.find('id')
+        index += 2
+        element = message[index:]
+        index = webpageString.find('id = '+ element)
+        index = webpageString.find('<AFTER>', index + 1)
+        index += 7
+        webpageString = webpageString[:index] + res + webpageString[index:]
+    else:
+        index = webpageString.find('</body>')
+        webpageString = webpageString[:index] + res + webpageString[index:]
     counter += 1
-    index = webpageString.find('</body>')
-    webpageString = webpageString[:index] + res + webpageString[index:]
+    webpageString.replace('<AFTER>', '')
+    webpageString.replace('<BEFORE>', '')
     file.seek(0, 0)
     file.write(webpageString)
     file.flush()
