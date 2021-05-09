@@ -1,0 +1,7 @@
+training.py script
+
+# For Location NN model training set next parameters:
+HTMLelements.json words.pkl classes.pkl chatbotmodel.h5
+
+# For HTML elements NN model training set next parameters:
+locationintents.json locwords.pkl locclasses.pkl locchatbotmodel.h5
