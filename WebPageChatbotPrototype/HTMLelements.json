@@ -9,7 +9,7 @@
         "give me a paragraph with content"
       ],
       "responses": [
-        "<p id = ?> <CONTENT> </p>"
+        "<BEFORE><p id = ?> <CONTENT> </p><AFTER>"
       ]
     },
     {
@@ -21,7 +21,7 @@
         "give me a header 1 with content"
       ],
       "responses": [
-        "<h1 id = ?> <CONTENT> </h1>"
+        "<BEFORE><h1 id = ?> <CONTENT> </h1><AFTER>"
       ]
     },
     {
@@ -33,7 +33,7 @@
         "give me a header 2 with content"
       ],
       "responses": [
-        "<h2 id = ?> <CONTENT> </h2>"
+        "<BEFORE><h2 id = ?> <CONTENT> </h2><AFTER>"
       ]
     },
     {

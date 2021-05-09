@@ -61,21 +61,41 @@ def get_response(intents_list, intents_json):
 
 print('BOT IS RUNNING')
 
-file = open('page.html', 'w')
-
 while True:
     message = input("")
+    if "end" in message:
+        break
     ints = predict_class(message)
     res = get_response(ints, intents)
     res = res.replace("?", str(counter))
     if "content" in message:
         index = message.find('content')
+        index += 7
         res = res.replace("<CONTENT>", message[index:])
+    if "before" in message:
+        index = message.find('id')
+        index += 3
+        element = message[index]
+        index = webpageString.find('id = ' + element)
+        index -= 12
+        webpageString = webpageString[:index] + res + webpageString[index:]
+    elif "after" in message:
+        index = message.find('id')
+        index += 3
+        element = message[index]
+        index = webpageString.find('id = ' + element)
+        index = webpageString.find('<AFTER>', index + 1)
+        index += 7
+        webpageString = webpageString[:index] + res + webpageString[index:]
+    else:
+        index = webpageString.find('</body>')
+        webpageString = webpageString[:index] + res + webpageString[index:]
     counter += 1
-    index = webpageString.find('</body>')
-    webpageString = webpageString[:index] + res + webpageString[index:]
-    file.seek(0, 0)
-    file.write(webpageString)
-    file.flush()
     print(res)
 
+webpageString = webpageString.replace('<AFTER>', '')
+webpageString = webpageString.replace('<BEFORE>', '')
+webpageString = webpageString.replace('<CONTENT>', '')
+file = open('page.html', 'w')
+file.write(webpageString)
+file.flush()
