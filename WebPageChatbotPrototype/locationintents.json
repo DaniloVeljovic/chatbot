@@ -1,0 +1,25 @@
+{
+  "intents": [
+    {
+      "tag": "before",
+      "patterns": [
+        "before",
+        "prior to",
+        "previuos to",
+        "ahead of",
+        "in front of"
+      ]
+    },
+    {
+      "tag":"after",
+      "patterns": [
+        "after",
+        "behind",
+        "next to",
+        "posterior to",
+        "following",
+        "beside"
+      ]
+    }
+  ]
+}

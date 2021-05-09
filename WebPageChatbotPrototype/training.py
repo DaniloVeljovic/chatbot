@@ -10,9 +10,11 @@ from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Activation, Dropout
 from tensorflow.keras.optimizers import SGD
 
+import sys
+
 lemmatizer = WordNetLemmatizer()
 
-intents = json.loads(open('HTMLelements.json').read())
+intents = json.loads(open(sys.argv[1]).read()) # 'HTMLelements.json'
 
 words = []
 classes = []
@@ -32,8 +34,8 @@ words = sorted(set(words))
 
 classes = sorted(set(classes))
 
-pickle.dump(words, open('words.pkl', 'wb'))
-pickle.dump(classes, open('classes.pkl', 'wb'))
+pickle.dump(words, open(sys.argv[2], 'wb'))  # 'words.pkl'
+pickle.dump(classes, open(sys.argv[3], 'wb'))  # 'classes.pkl'
 
 training = []
 output_empty = [0] * len(classes)
@@ -67,6 +69,6 @@ model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy
 
 hist = model.fit(np.array(train_x), np.array(train_y), epochs=200, batch_size=5, verbose=1)
 
-model.save('chatbotmodel.h5', hist)
+model.save(sys.argv[4], hist)  # 'chatbotmodel.h5'
 
 print('done')
