@@ -46,6 +46,42 @@
       "responses": [
         "<ul id = ?> </ul>"
       ]
+    },
+    {
+      "tag": "div",
+      "patterns": [
+        "i need a div",
+        "put a div",
+        "give me a div",
+        "add a div"
+      ],
+      "responses": [
+        "<BEFORE><div id = ?> <CONTENT> </div><AFTER>"
+      ]
+    },
+    {
+      "tag": "span",
+      "patterns": [
+        "i need a span",
+        "put a span",
+        "give me a span",
+        "add a span"
+      ],
+      "responses": [
+        "<BEFORE><span id = ?> <CONTENT> </span><AFTER>"
+      ]
+    },
+    {
+      "tag": "textarea",
+      "patterns": [
+        "i need a textarea",
+        "put a textarea",
+        "give me a textarea",
+        "add a textarea"
+      ],
+      "responses": [
+        "<BEFORE><textarea id = ?> <CONTENT> </textarea><AFTER>"
+      ]
     }
   ]
 }

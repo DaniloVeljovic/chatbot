@@ -91,7 +91,7 @@ while True:
         index += 3
         element = message[index]
         index = webpageString.find('id = ' + element)
-        index -= 12
+        index -= 11
         webpageString = webpageString[:index] + res + webpageString[index:]
     elif i_class == "after":
         index = message.find('id')
@@ -99,7 +99,7 @@ while True:
         element = message[index]
         index = webpageString.find('id = ' + element)
         index = webpageString.find('<AFTER>', index + 1)
-        index += 8
+        index += 7
         webpageString = webpageString[:index] + res + webpageString[index:]
     else:
         index = webpageString.find('</body>')

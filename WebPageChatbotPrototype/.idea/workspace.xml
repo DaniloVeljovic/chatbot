@@ -20,15 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e21cfd91-1914-4e3a-8c22-9d0d6dd615d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/locationintents.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/WebPageChatbotPrototype.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/WebPageChatbotPrototype.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTMLelements.json" beforeDir="false" afterPath="$PROJECT_DIR$/HTMLelements.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chatbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chatbotmodel.h5" beforeDir="false" afterPath="$PROJECT_DIR$/chatbotmodel.h5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/classes.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/classes.pkl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training.py" beforeDir="false" afterPath="$PROJECT_DIR$/training.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/words.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/words.pkl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -151,6 +147,16 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -161,60 +167,69 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="225" y="68" width="886" height="689" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620587273481">
+    <state x="225" y="68" width="886" height="689" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620594292477">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="225" y="68" width="886" height="689" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1620587273481" />
+    <state x="225" y="68" width="886" height="689" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1620594292477" />
+    <state x="0" y="165" key="#xdebugger.XInspectDialog" timestamp="1620673007356">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="0" y="165" key="#xdebugger.XInspectDialog/0.0.1536.824@0.0.1536.824" timestamp="1620673007356" />
     <state width="987" height="466" key="DebuggerActiveHint" timestamp="1620591124913">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="987" height="466" key="DebuggerActiveHint/0.0.1536.824@0.0.1536.824" timestamp="1620591124913" />
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1620593199256">
+    <state x="762" y="0" width="781" height="830" key="DiffContextDialog" timestamp="1620672867470">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="93" y="93" width="1350" height="638" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1620593199256" />
+    <state x="762" y="0" width="781" height="830" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1620672867470" />
     <state x="361" y="276" key="FileChooserDialogImpl" timestamp="1620561262063">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="276" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620561262063" />
-    <state width="1515" height="213" key="GridCell.Tab.0.bottom" timestamp="1620593819579">
+    <state width="1515" height="261" key="GridCell.Tab.0.bottom" timestamp="1620673182800">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="213" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620593819579" />
-    <state width="1515" height="213" key="GridCell.Tab.0.center" timestamp="1620593819579">
+    <state width="1515" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620673182800" />
+    <state width="1515" height="261" key="GridCell.Tab.0.center" timestamp="1620673182800">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="213" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620593819579" />
-    <state width="1515" height="213" key="GridCell.Tab.0.left" timestamp="1620593819579">
+    <state width="1515" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1620673182800" />
+    <state width="1515" height="261" key="GridCell.Tab.0.left" timestamp="1620673182800">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="213" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620593819579" />
-    <state width="1515" height="213" key="GridCell.Tab.0.right" timestamp="1620593819579">
+    <state width="1515" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1620673182800" />
+    <state width="1515" height="261" key="GridCell.Tab.0.right" timestamp="1620673182800">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="213" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620593819579" />
-    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1620593372749">
+    <state width="1515" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1620673182800" />
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom" timestamp="1620673182800">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620593372749" />
-    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1620593372749">
+    <state width="1515" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1620673182800" />
+    <state width="1515" height="261" key="GridCell.Tab.1.center" timestamp="1620673182800">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1620593372749" />
-    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1620593372749">
+    <state width="1515" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1620673182800" />
+    <state width="1515" height="261" key="GridCell.Tab.1.left" timestamp="1620673182800">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1620593372749" />
-    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1620593372749">
+    <state width="1515" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1620673182800" />
+    <state width="1515" height="261" key="GridCell.Tab.1.right" timestamp="1620673182800">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1620593372749" />
+    <state width="1515" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1620673182800" />
     <state x="340" y="78" key="SettingsEditor" timestamp="1620562017082">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="340" y="78" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1620562017082" />
+    <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1620673149745">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1620673149745" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1620574886329">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -231,11 +246,6 @@
           <url>file://$PROJECT_DIR$/training.py</url>
           <line>16</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/chatbot.py</url>
-          <line>69</line>
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
