@@ -94,7 +94,7 @@ while True:
         index += 3
         element = message[index]
         index = webpageString.find('id = ' + element)
-        index -= 12
+        index = webpageString[:index].rfind('<BEFORE>')
         webpageString = webpageString[:index] + res + webpageString[index:]
     elif i_class == "after":
         index = message.find('id')
