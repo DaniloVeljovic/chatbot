@@ -88,7 +88,9 @@ while True:
 
     ints = predict_el_class(message)
     res = get_response(ints, el_intents)
-    res = res.replace("?", str(counter))
+    while res.find("?") != -1:
+        res = res.replace("?", str(counter), 1)
+        counter += 1
     if i_class == "before":
         index = message.find('id')
         index += 3
@@ -107,7 +109,6 @@ while True:
     else:
         index = webpageString.find('</body>')
         webpageString = webpageString[:index] + res + webpageString[index:]
-    counter += 1
 
     formattedWebString = webpageString.replace('<AFTER>', '')
     formattedWebString = formattedWebString.replace('<BEFORE>', '')
@@ -117,10 +118,10 @@ while True:
     prettyHTML = soup.prettify()
     image = np.zeros([1024, 900, 1], dtype=np.uint8)
     image.fill(255)
-    y0, dy = 50, 20
+    y0, dy = 20, 10
     for i, line in enumerate(prettyHTML.split('\n')):
         y = y0 + i * dy
-        cv2.putText(image, line, (50, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, 2)
+        cv2.putText(image, line, (20, y), cv2.FONT_HERSHEY_SIMPLEX, 0.3, 1)
     cv2.imshow('Generated HTML code', image)
     cv2.waitKey(0)
     print(res)

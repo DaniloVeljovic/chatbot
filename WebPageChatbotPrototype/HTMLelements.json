@@ -13,30 +13,6 @@
       ]
     },
     {
-      "tag": "header1",
-      "patterns": [
-        "i need a header 1",
-        "put a header 1",
-        "give me a header 1",
-        "give me a header 1 with content"
-      ],
-      "responses": [
-        "<BEFORE><h1 id = ?> </h1><AFTER>"
-      ]
-    },
-    {
-      "tag": "header2",
-      "patterns": [
-        "i need a header 2",
-        "put a header 2",
-        "give me a header 2",
-        "give me a header 2 with content"
-      ],
-      "responses": [
-        "<BEFORE><h2 id = ?> </h2><AFTER>"
-      ]
-    },
-    {
       "tag": "ulist",
       "patterns": [
         "i need a unoredered list",
@@ -81,6 +57,42 @@
       ],
       "responses": [
         "<BEFORE><textarea id = ?> </textarea><AFTER>"
+      ]
+    },
+    {
+      "tag": "header",
+      "patterns": [
+        "i need a header",
+        "put a header",
+        "give me a header",
+        "add a header"
+      ],
+      "responses": [
+          "<BEFORE><div id = ?><h2 id = ?> </h2><AFTER> <BEFORE><h4 id = ?> </h4><AFTER><BEFORE><h6 id = ?> </h6></div><AFTER>"
+      ]
+    },
+    {
+      "tag": "footer",
+      "patterns": [
+        "i need a footer",
+        "put a footer",
+        "give me a footer",
+        "add a footer"
+      ],
+      "responses": [
+          "<BEFORE><div id = ?><div id = ?> </div><p id = ?> </p><div id = ?> </div></div><AFTER>"
+      ]
+    },
+    {
+      "tag": "body",
+      "patterns": [
+        "i need a body",
+        "put a body",
+        "give me a body",
+        "add a body"
+      ],
+      "responses": [
+          "<BEFORE><div class=\"container\" id = ?>\n  <div class=\"row\" id = ?>\n    <div class=\"col-sm-3\" id = ?></div>\n    <div class=\"col-sm-6\" id = ?></div>\n    <div class=\"col-sm-3\" id = ?></div>\n  </div>\n  <div class=\"row\" id = ?>\n    <div class=\"col-sm-3\" id = ?></div>\n    <div class=\"col-sm-6\" id = ?></div>\n    <div class=\"col-sm-3\" id = ?></div>\n  </div>\n  <div class=\"row\" id = ?>\n    <div class=\"col-sm-3\" id = ?></div>\n    <div class=\"col-sm-6\" id = ?></div>\n    <div class=\"col-sm-3\" id = ?></div>\n  </div>\n</div><AFTER>"
       ]
     }
   ]
