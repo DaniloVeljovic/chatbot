@@ -14,7 +14,7 @@ import sys
 
 lemmatizer = WordNetLemmatizer()
 
-intents = json.loads(open(sys.argv[1]).read()) # 'HTMLelements.json'
+intents = json.loads(open(sys.argv[1]).read()) # 'elements.json'
 
 words = []
 classes = []
@@ -62,7 +62,7 @@ model.add(Dense(128, input_shape=(len(train_x[0]),), activation='relu'))
 model.add(Dropout(0.5))
 model.add(Dense(63, activation='relu'))
 model.add(Dropout(0.5))
-model.add(Dense(len(train_y[0]), activation='softmax'))
+model.add(Dense(len(train_y[0]), activation='sigmoid'))
 
 sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])

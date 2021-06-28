@@ -94,6 +94,29 @@
       "responses": [
           "<BEFORE><div class=\"container\" id = ?>\n  <div class=\"row\" id = ?>\n    <div class=\"col-sm-3\" id = ?></div>\n    <div class=\"col-sm-6\" id = ?></div>\n    <div class=\"col-sm-3\" id = ?></div>\n  </div>\n  <div class=\"row\" id = ?>\n    <div class=\"col-sm-3\" id = ?></div>\n    <div class=\"col-sm-6\" id = ?></div>\n    <div class=\"col-sm-3\" id = ?></div>\n  </div>\n  <div class=\"row\" id = ?>\n    <div class=\"col-sm-3\" id = ?></div>\n    <div class=\"col-sm-6\" id = ?></div>\n    <div class=\"col-sm-3\" id = ?></div>\n  </div>\n</div><AFTER>"
       ]
+    },
+    {
+      "tag": "before",
+      "patterns": [
+        "add before",
+        "put before",
+        "prior to",
+        "previuos to",
+        "ahead of",
+        "in front of"
+      ]
+    },
+    {
+      "tag":"after",
+      "patterns": [
+        "add after",
+        "put after",
+        "behind",
+        "next to",
+        "posterior to",
+        "following",
+        "beside"
+      ]
     }
   ]
 }
