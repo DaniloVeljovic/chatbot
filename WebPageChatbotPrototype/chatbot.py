@@ -44,7 +44,7 @@ def bag_of_words(sentence, _words):
 def predict_class(sentence):
     bow = bag_of_words(sentence, words)
     res = model.predict(np.array([bow]))[0]
-    ERROR_THRESHOLD = 0.94
+    ERROR_THRESHOLD = 0.96
     result = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
 
     #result.sort(key=lambda x: x[1], reverse=True)
@@ -112,33 +112,21 @@ while True:
                 add_content_only = False
         to_add += r
     if is_content and add_content_only:
-        index = message.find('id')
-        index += 3
-        element = message[index]
         cont = all_contents[0]
-        index = webpageString.find('id = ' + element)
+        index = webpageString.find('id = ' + re.findall('[0-9]+', re.findall('id [0-9]+', message, re.DOTALL)[0], re.DOTALL)[0])
         index = webpageString.find('<CONTENT>', index + 1)
         webpageString = webpageString[:index] + cont + webpageString[index:]
     if i_class == "before":
-        index = message.find('id')
-        index += 3
-        element = message[index]
-        index = webpageString.find('id = ' + element)
+        index = webpageString.find('id = ' + re.findall('[0-9]+', re.findall('id [0-9]+', message, re.DOTALL)[0], re.DOTALL)[0])
         index = webpageString[:index].rfind('<BEFORE>')
         webpageString = webpageString[:index] + to_add + webpageString[index:]
     elif i_class == "after":
-        index = message.find('id')
-        index += 3
-        element = message[index]
-        index = webpageString.find('id = ' + element)
+        index = webpageString.find('id = ' + re.findall('[0-9]+', re.findall('id [0-9]+', message, re.DOTALL)[0], re.DOTALL)[0])
         index = webpageString.find('<AFTER>', index + 1)
         index += 7
         webpageString = webpageString[:index] + to_add + webpageString[index:]
     elif i_class == "inside":
-        index = message.find('id')
-        index += 3
-        element = message[index]
-        index = webpageString.find('id = ' + element)
+        index = webpageString.find('id = ' + re.findall('[0-9]+', re.findall('id [0-9]+', message, re.DOTALL)[0], re.DOTALL)[0])
         index = webpageString.find('<INSIDE>', index + 1)
         webpageString = webpageString[:index] + to_add + webpageString[index:]
     else:

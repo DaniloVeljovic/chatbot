@@ -13,17 +13,6 @@
       ]
     },
     {
-      "tag": "ulist",
-      "patterns": [
-        "i need a unoredered list",
-        "put a unordered list",
-        "give me a unordered list"
-      ],
-      "responses": [
-        "<ul id = ?> <CONTENT><INSIDE> </ul>"
-      ]
-    },
-    {
       "tag": "div",
       "patterns": [
         "i need a div",
@@ -68,7 +57,7 @@
         "add a header"
       ],
       "responses": [
-          "<BEFORE><div id = ?><h2 id = ?> </h2><AFTER> <BEFORE><h4 id = ?> </h4><AFTER><BEFORE><h6 id = ?> </h6></div><AFTER>"
+          "<BEFORE><div id = ?> <CONTENT><INSIDE> <h2 id = ?> <CONTENT> </h2><AFTER> <BEFORE><h4 id = ?> <CONTENT> </h4><AFTER><BEFORE><h6 id = ?> <CONTENT> </h6></div><AFTER>"
       ]
     },
     {
@@ -80,19 +69,19 @@
         "add a footer"
       ],
       "responses": [
-          "<BEFORE><div id = ?><div id = ?> </div><p id = ?> </p><div id = ?> </div></div><AFTER>"
+          "<BEFORE><div id = ?> <CONTENT><INSIDE> <div id = ?> <CONTENT><INSIDE> </div><p id = ?> <CONTENT> </p><div id = ?> <CONTENT><INSIDE> </div></div><AFTER>"
       ]
     },
     {
-      "tag": "body",
+      "tag": "grid",
       "patterns": [
-        "i need a body",
-        "put a body",
-        "give me a body",
-        "add a body"
+        "i need a grid",
+        "put a grid",
+        "give me a grid",
+        "add a grid"
       ],
       "responses": [
-          "<BEFORE><div class=\"container\" id = ?>\n  <div class=\"row\" id = ?>\n    <div class=\"col-sm-3\" id = ?></div>\n    <div class=\"col-sm-6\" id = ?></div>\n    <div class=\"col-sm-3\" id = ?></div>\n  </div>\n  <div class=\"row\" id = ?>\n    <div class=\"col-sm-3\" id = ?></div>\n    <div class=\"col-sm-6\" id = ?></div>\n    <div class=\"col-sm-3\" id = ?></div>\n  </div>\n  <div class=\"row\" id = ?>\n    <div class=\"col-sm-3\" id = ?></div>\n    <div class=\"col-sm-6\" id = ?></div>\n    <div class=\"col-sm-3\" id = ?></div>\n  </div>\n</div><AFTER>"
+          "<BEFORE><div class=\"container\" id = ?>\n  <div class=\"row\" id = ?>\n    <div class=\"col-sm-3\" id = ?> <CONTENT><INSIDE> </div>\n    <div class=\"col-sm-6\" id = ?> <CONTENT><INSIDE> </div>\n    <div class=\"col-sm-3\" id = ?> <CONTENT><INSIDE> </div>\n  </div>\n  <div class=\"row\" id = ?>\n    <div class=\"col-sm-3\" id = ?> <CONTENT><INSIDE> </div>\n    <div class=\"col-sm-6\" id = ?> <CONTENT><INSIDE> </div>\n    <div class=\"col-sm-3\" id = ?> <CONTENT><INSIDE> </div>\n  </div>\n  <div class=\"row\" id = ?>\n    <div class=\"col-sm-3\" id = ?> <CONTENT><INSIDE> </div>\n    <div class=\"col-sm-6\" id = ?> <CONTENT><INSIDE> </div>\n    <div class=\"col-sm-3\" id = ?> <CONTENT><INSIDE> </div>\n  </div>\n</div><AFTER>"
       ]
     },
     {
@@ -119,10 +108,9 @@
     {
       "tag": "content",
       "patterns": [
-        "with content",
-        "add content",
-        "put content",
-        "place content"
+        "add with content",
+        "put with content",
+        "place with content"
       ]
     },
     {
