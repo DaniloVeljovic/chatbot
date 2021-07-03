@@ -20,13 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e21cfd91-1914-4e3a-8c22-9d0d6dd615d2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/location.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chatbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatbotmodel.h5" beforeDir="false" afterPath="$PROJECT_DIR$/chatbotmodel.h5" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/classes.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chatbotmodel.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/classes.pkl" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/elements.json" beforeDir="false" afterPath="$PROJECT_DIR$/elements.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/training.py" beforeDir="false" afterPath="$PROJECT_DIR$/training.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/words.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/words.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/locchatbotmodel.h5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locclasses.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/locwords.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/words.pkl" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +51,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/chatbot.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/training.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.chatbot">
@@ -94,7 +97,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="train_model" type="PythonConfigurationType" factoryName="Python">
+    <configuration name="train_el_model" type="PythonConfigurationType" factoryName="Python">
       <module name="WebPageChatbotPrototype" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -107,7 +110,28 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/training.py" />
-      <option name="PARAMETERS" value="elements.json words.pkl classes.pkl chatbotmodel.h5" />
+      <option name="PARAMETERS" value="elements.json el_words.pkl el_classes.pkl el_chatbotmodel.h5" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="train_loc_model" type="PythonConfigurationType" factoryName="Python">
+      <module name="WebPageChatbotPrototype" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="D:\RiI\5. Master\DL\chatbot\WebPageChatbotPrototype\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/training.py" />
+      <option name="PARAMETERS" value="location.json loc_words.pkl loc_classes.pkl loc_chatbotmodel.h5" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -117,7 +141,8 @@
     </configuration>
     <list>
       <item itemvalue="Python.chatbot" />
-      <item itemvalue="Python.train_model" />
+      <item itemvalue="Python.train_el_model" />
+      <item itemvalue="Python.train_loc_model" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -154,26 +179,26 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="225" y="68" width="886" height="689" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1624904409460">
+    <state x="225" y="68" width="886" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1625320586730">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="225" y="68" width="886" height="689" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1624904409460" />
+    <state x="225" y="68" width="886" height="713" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1625320586730" />
     <state x="507" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1624903568704">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="507" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1624903568704" />
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1624903499772">
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1625320618562">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1624903499772" />
+    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1625320618562" />
     <state x="0" y="165" key="#xdebugger.XInspectDialog" timestamp="1620673007356">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="0" y="165" key="#xdebugger.XInspectDialog/0.0.1536.824@0.0.1536.824" timestamp="1620673007356" />
-    <state x="858" y="178" key="#xdebugger.evaluate" timestamp="1625306062120">
+    <state x="858" y="178" key="#xdebugger.evaluate" timestamp="1625321221500">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="858" y="178" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1625306062120" />
+    <state x="858" y="178" key="#xdebugger.evaluate/0.0.1536.824@0.0.1536.824" timestamp="1625321221500" />
     <state width="987" height="466" key="DebuggerActiveHint" timestamp="1620591124913">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -182,42 +207,42 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="762" y="0" width="781" height="830" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1620672867470" />
-    <state x="361" y="276" key="FileChooserDialogImpl" timestamp="1620561262063">
+    <state x="361" y="276" key="FileChooserDialogImpl" timestamp="1625320567349">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="276" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1620561262063" />
-    <state width="1515" height="257" key="GridCell.Tab.0.bottom" timestamp="1625307664905">
+    <state x="361" y="276" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1625320567349" />
+    <state width="1515" height="257" key="GridCell.Tab.0.bottom" timestamp="1625322105012">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="257" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1625307664905" />
-    <state width="1515" height="257" key="GridCell.Tab.0.center" timestamp="1625307664905">
+    <state width="1515" height="257" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1625322105012" />
+    <state width="1515" height="257" key="GridCell.Tab.0.center" timestamp="1625322105011">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="257" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1625307664905" />
-    <state width="1515" height="257" key="GridCell.Tab.0.left" timestamp="1625307664905">
+    <state width="1515" height="257" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1625322105011" />
+    <state width="1515" height="257" key="GridCell.Tab.0.left" timestamp="1625322105011">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="257" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1625307664905" />
-    <state width="1515" height="257" key="GridCell.Tab.0.right" timestamp="1625307664905">
+    <state width="1515" height="257" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1625322105011" />
+    <state width="1515" height="257" key="GridCell.Tab.0.right" timestamp="1625322105011">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="257" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1625307664905" />
-    <state width="1515" height="257" key="GridCell.Tab.1.bottom" timestamp="1625307687035">
+    <state width="1515" height="257" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1625322105011" />
+    <state width="1515" height="257" key="GridCell.Tab.1.bottom" timestamp="1625322096133">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="257" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1625307687035" />
-    <state width="1515" height="257" key="GridCell.Tab.1.center" timestamp="1625307687034">
+    <state width="1515" height="257" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1625322096133" />
+    <state width="1515" height="257" key="GridCell.Tab.1.center" timestamp="1625322096133">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="257" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1625307687034" />
-    <state width="1515" height="257" key="GridCell.Tab.1.left" timestamp="1625307687034">
+    <state width="1515" height="257" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1625322096133" />
+    <state width="1515" height="257" key="GridCell.Tab.1.left" timestamp="1625322096133">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="257" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1625307687034" />
-    <state width="1515" height="257" key="GridCell.Tab.1.right" timestamp="1625307687034">
+    <state width="1515" height="257" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1625322096133" />
+    <state width="1515" height="257" key="GridCell.Tab.1.right" timestamp="1625322096133">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="257" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1625307687034" />
+    <state width="1515" height="257" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1625322096133" />
     <state x="340" y="78" key="SettingsEditor" timestamp="1621798891675">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -244,8 +269,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/chatbot.py</url>
-          <line>89</line>
-          <option name="timeStamp" value="24" />
+          <line>106</line>
+          <option name="timeStamp" value="37" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
