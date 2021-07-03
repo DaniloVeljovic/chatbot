@@ -9,6 +9,7 @@ from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
 from bs4 import BeautifulSoup as bs
 import cv2
+import re
 
 lemmatizer = WordNetLemmatizer()
 
@@ -61,7 +62,7 @@ def get_response(intents_list, intents_json):
     results = []
     for i in list_of_intents:
         for j in tags:
-            if i['tag'] == j and i['tag'] != 'before' and i['tag'] != 'after':
+            if i['tag'] == j and i['tag'] != 'before' and i['tag'] != 'after' and i['tag'] != 'inside' and i['tag'] != 'content':
                 results.append(i['responses'][0])
                 break
     return results
@@ -75,22 +76,49 @@ while True:
         break
     #i_class = predict_location_class(message)
 
-    ints = predict_class(message)
+    content_counter = 0
+    all_contents = re.findall('<[^>]+>', message, re.DOTALL)
+    ints = predict_class(re.sub('<[^>]+>', '', message))
+
+    for i in range(len(all_contents)):
+        all_contents[i] = all_contents[i].replace('<', '')
+        all_contents[i] = all_contents[i].replace('>', '')
+
+    is_content = False
+    add_content_only = True
 
     i_class = None
     for i in ints:
+        if i['intent'] == 'content':
+            is_content = True
         if i['intent'] == 'before':
             i_class = 'before'
         elif i['intent'] == 'after':
             i_class = 'after'
+        elif i['intent'] == 'inside':
+            i_class = 'inside'
 
     res = get_response(ints, intents)
     to_add = ''
     for r in res:
         while r.find("?") != -1:
+            i = r.find("?")
             r = r.replace("?", str(counter), 1)
             counter += 1
+            if is_content:
+                i = r.find('<CONTENT>', i)
+                r = r[:i] + all_contents[content_counter] + r[i:]
+                content_counter += 1
+                add_content_only = False
         to_add += r
+    if is_content and add_content_only:
+        index = message.find('id')
+        index += 3
+        element = message[index]
+        cont = all_contents[0]
+        index = webpageString.find('id = ' + element)
+        index = webpageString.find('<CONTENT>', index + 1)
+        webpageString = webpageString[:index] + cont + webpageString[index:]
     if i_class == "before":
         index = message.find('id')
         index += 3
@@ -106,6 +134,13 @@ while True:
         index = webpageString.find('<AFTER>', index + 1)
         index += 7
         webpageString = webpageString[:index] + to_add + webpageString[index:]
+    elif i_class == "inside":
+        index = message.find('id')
+        index += 3
+        element = message[index]
+        index = webpageString.find('id = ' + element)
+        index = webpageString.find('<INSIDE>', index + 1)
+        webpageString = webpageString[:index] + to_add + webpageString[index:]
     else:
         index = webpageString.find('</body>')
         webpageString = webpageString[:index] + to_add + webpageString[index:]
@@ -113,6 +148,7 @@ while True:
     formattedWebString = webpageString.replace('<AFTER>', '')
     formattedWebString = formattedWebString.replace('<BEFORE>', '')
     formattedWebString = formattedWebString.replace('<CONTENT>', '')
+    formattedWebString = formattedWebString.replace('<INSIDE>', '')
 
     soup = bs(formattedWebString)
     prettyHTML = soup.prettify()

@@ -9,7 +9,7 @@
         "give me a paragraph with content"
       ],
       "responses": [
-        "<BEFORE><p id = ?> </p><AFTER>"
+        "<BEFORE><p id = ?> <CONTENT> </p><AFTER>"
       ]
     },
     {
@@ -20,7 +20,7 @@
         "give me a unordered list"
       ],
       "responses": [
-        "<ul id = ?> </ul>"
+        "<ul id = ?> <CONTENT><INSIDE> </ul>"
       ]
     },
     {
@@ -32,7 +32,7 @@
         "add a div"
       ],
       "responses": [
-        "<BEFORE><div id = ?> </div><AFTER>"
+        "<BEFORE><div id = ?> <CONTENT><INSIDE> </div><AFTER>"
       ]
     },
     {
@@ -44,7 +44,7 @@
         "add a span"
       ],
       "responses": [
-        "<BEFORE><span id = ?> </span><AFTER>"
+        "<BEFORE><span id = ?> <CONTENT><INSIDE> </span><AFTER>"
       ]
     },
     {
@@ -56,7 +56,7 @@
         "add a textarea"
       ],
       "responses": [
-        "<BEFORE><textarea id = ?> </textarea><AFTER>"
+        "<BEFORE><textarea id = ?> <CONTENT> </textarea><AFTER>"
       ]
     },
     {
@@ -98,10 +98,9 @@
     {
       "tag": "before",
       "patterns": [
-        "add before",
-        "put before",
+        "before",
         "prior to",
-        "previuos to",
+        "previous to",
         "ahead of",
         "in front of"
       ]
@@ -109,13 +108,28 @@
     {
       "tag":"after",
       "patterns": [
-        "add after",
-        "put after",
+        "after",
         "behind",
         "next to",
         "posterior to",
         "following",
         "beside"
+      ]
+    },
+    {
+      "tag": "content",
+      "patterns": [
+        "with content",
+        "add content",
+        "put content",
+        "place content"
+      ]
+    },
+    {
+      "tag": "inside",
+      "patterns": [
+        "inside",
+        "in"
       ]
     }
   ]
