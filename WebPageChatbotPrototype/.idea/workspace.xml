@@ -20,16 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e21cfd91-1914-4e3a-8c22-9d0d6dd615d2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/location.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tableGenerator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chatbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/chatbot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chatbotmodel.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes.pkl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/el_chatbotmodel.h5" beforeDir="false" afterPath="$PROJECT_DIR$/el_chatbotmodel.h5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/el_classes.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/el_classes.pkl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/el_words.pkl" beforeDir="false" afterPath="$PROJECT_DIR$/el_words.pkl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/elements.json" beforeDir="false" afterPath="$PROJECT_DIR$/elements.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/locchatbotmodel.h5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/locclasses.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/locwords.pkl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/words.pkl" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,38 +208,38 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="276" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1625320567349" />
-    <state width="1515" height="257" key="GridCell.Tab.0.bottom" timestamp="1625322105012">
+    <state width="1515" height="213" key="GridCell.Tab.0.bottom" timestamp="1625331790940">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="257" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1625322105012" />
-    <state width="1515" height="257" key="GridCell.Tab.0.center" timestamp="1625322105011">
+    <state width="1515" height="213" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1625331790940" />
+    <state width="1515" height="213" key="GridCell.Tab.0.center" timestamp="1625331790940">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="257" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1625322105011" />
-    <state width="1515" height="257" key="GridCell.Tab.0.left" timestamp="1625322105011">
+    <state width="1515" height="213" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1625331790940" />
+    <state width="1515" height="213" key="GridCell.Tab.0.left" timestamp="1625331790940">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="257" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1625322105011" />
-    <state width="1515" height="257" key="GridCell.Tab.0.right" timestamp="1625322105011">
+    <state width="1515" height="213" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1625331790940" />
+    <state width="1515" height="213" key="GridCell.Tab.0.right" timestamp="1625331790940">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="257" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1625322105011" />
-    <state width="1515" height="257" key="GridCell.Tab.1.bottom" timestamp="1625322096133">
+    <state width="1515" height="213" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1625331790940" />
+    <state width="1515" height="213" key="GridCell.Tab.1.bottom" timestamp="1625331790815">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="257" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1625322096133" />
-    <state width="1515" height="257" key="GridCell.Tab.1.center" timestamp="1625322096133">
+    <state width="1515" height="213" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1625331790815" />
+    <state width="1515" height="213" key="GridCell.Tab.1.center" timestamp="1625331790815">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="257" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1625322096133" />
-    <state width="1515" height="257" key="GridCell.Tab.1.left" timestamp="1625322096133">
+    <state width="1515" height="213" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1625331790815" />
+    <state width="1515" height="213" key="GridCell.Tab.1.left" timestamp="1625331790814">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="257" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1625322096133" />
-    <state width="1515" height="257" key="GridCell.Tab.1.right" timestamp="1625322096133">
+    <state width="1515" height="213" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1625331790814" />
+    <state width="1515" height="213" key="GridCell.Tab.1.right" timestamp="1625331790815">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="257" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1625322096133" />
+    <state width="1515" height="213" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1625331790815" />
     <state x="340" y="78" key="SettingsEditor" timestamp="1621798891675">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -266,13 +263,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/chatbot.py</url>
-          <line>106</line>
-          <option name="timeStamp" value="37" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">

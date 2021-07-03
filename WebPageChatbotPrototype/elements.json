@@ -91,6 +91,12 @@
         "put with content",
         "place with content"
       ]
+    },
+    {
+      "tag": "table",
+      "patterns": [
+        "table"
+      ]
     }
   ]
 }

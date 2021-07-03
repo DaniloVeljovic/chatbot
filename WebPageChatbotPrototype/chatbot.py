@@ -11,6 +11,8 @@ from bs4 import BeautifulSoup as bs
 import cv2
 import re
 
+from tableGenerator import generate_table
+
 lemmatizer = WordNetLemmatizer()
 
 intents = json.loads(open('elements.json').read())
@@ -99,45 +101,63 @@ while True:
     add_content_only = True
 
     i_class = predict_loc_class(message)
+    table_class = False
 
     for i in ints:
         if i['intent'] == 'content':
             is_content = True
+        if i['intent'] == 'table':
+            table_class = True
 
-    res = get_response(ints, intents)
-    to_add = ''
-    for r in res:
-        while r.find("?") != -1:
-            i = r.find("?")
-            r = r.replace("?", str(counter), 1)
+    skip_to_string_formatting = False
+
+    if table_class:
+        row_num = int(input("How many rows do you want?"))
+        cols_num = int(input("How many columns do you want?"))
+        table = generate_table(row_num, cols_num)
+        while table.find("?") != -1:
+            i = table.find("?")
+            table = table.replace("?", str(counter), 1)
             counter += 1
-            if is_content:
-                i = r.find('<CONTENT>', i)
-                r = r[:i] + all_contents[content_counter] + r[i:]
-                content_counter += 1
-                add_content_only = False
-        to_add += r
-    if is_content and add_content_only:
-        cont = all_contents[0]
-        index = webpageString.find('id = ' + re.findall('[0-9]+', re.findall('id [0-9]+', message, re.DOTALL)[0], re.DOTALL)[0])
-        index = webpageString.find('<CONTENT>', index + 1)
-        webpageString = webpageString[:index] + cont + webpageString[index:]
-    if i_class == "before":
-        index = webpageString.find('id = ' + re.findall('[0-9]+', re.findall('id [0-9]+', message, re.DOTALL)[0], re.DOTALL)[0])
-        index = webpageString[:index].rfind('<BEFORE>')
-        webpageString = webpageString[:index] + to_add + webpageString[index:]
-    elif i_class == "after":
-        index = webpageString.find('id = ' + re.findall('[0-9]+', re.findall('id [0-9]+', message, re.DOTALL)[0], re.DOTALL)[0])
-        index = webpageString.find('<AFTER>', index + 1)
-        index += 7
-        webpageString = webpageString[:index] + to_add + webpageString[index:]
-    elif i_class == "inside":
-        index = webpageString.find('id = ' + re.findall('[0-9]+', re.findall('id [0-9]+', message, re.DOTALL)[0], re.DOTALL)[0])
-        index = webpageString.find('<INSIDE>', index + 1)
-        webpageString = webpageString[:index] + to_add + webpageString[index:]
-    else:
         index = webpageString.find('</body>')
-        webpageString = webpageString[:index] + to_add + webpageString[index:]
+        webpageString = webpageString[:index] + table + webpageString[index:]
+        skip_to_string_formatting = True
+
+    if not skip_to_string_formatting:
+        res = get_response(ints, intents)
+        to_add = ''
+        for r in res:
+            while r.find("?") != -1:
+                i = r.find("?")
+                r = r.replace("?", str(counter), 1)
+                counter += 1
+                if is_content:
+                    i = r.find('<CONTENT>', i)
+                    r = r[:i] + all_contents[content_counter] + r[i:]
+                    content_counter += 1
+                    add_content_only = False
+            to_add += r
+        if is_content and add_content_only:
+            cont = all_contents[0]
+            index = webpageString.find('id = ' + re.findall('[0-9]+', re.findall('id [0-9]+', message, re.DOTALL)[0], re.DOTALL)[0])
+            index = webpageString.find('<CONTENT>', index + 1)
+            webpageString = webpageString[:index] + cont + webpageString[index:]
+        if i_class == "before":
+            index = webpageString.find('id = ' + re.findall('[0-9]+', re.findall('id [0-9]+', message, re.DOTALL)[0], re.DOTALL)[0])
+            index = webpageString[:index].rfind('<BEFORE>')
+            webpageString = webpageString[:index] + to_add + webpageString[index:]
+        elif i_class == "after":
+            index = webpageString.find('id = ' + re.findall('[0-9]+', re.findall('id [0-9]+', message, re.DOTALL)[0], re.DOTALL)[0])
+            index = webpageString.find('<AFTER>', index + 1)
+            index += 7
+            webpageString = webpageString[:index] + to_add + webpageString[index:]
+        elif i_class == "inside":
+            index = webpageString.find('id = ' + re.findall('[0-9]+', re.findall('id [0-9]+', message, re.DOTALL)[0], re.DOTALL)[0])
+            index = webpageString.find('<INSIDE>', index + 1)
+            webpageString = webpageString[:index] + to_add + webpageString[index:]
+        else:
+            index = webpageString.find('</body>')
+            webpageString = webpageString[:index] + to_add + webpageString[index:]
 
     formattedWebString = webpageString.replace('<AFTER>', '')
     formattedWebString = formattedWebString.replace('<BEFORE>', '')
